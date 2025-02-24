@@ -1,0 +1,118 @@
+        @import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
+        
+    :root {
+        --translate-x-value: -20px;
+    }
+     body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffcccb;
+            margin: 0;
+            flex-direction: column;
+            font-family: 'Ubuntu', Arial, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 1.3em;
+            line-height: 2;
+            font-weight: 300;
+            text-rendering: optimizeLegibility;
+            text-align: center;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .gift-box {
+            position: relative;
+            width: 15vw;
+            height: 15vw;
+            background: #ff4757;
+            border-radius: 10px;
+            cursor:grab;
+            /* transform: translateX(-50%); */
+            /* animation: floatUp 2s ease-out infinite alternate; */
+            /* animation: floatUp 2s ease-out infinite alternate; */
+        }
+        .gift-box :hover{
+            cursor: grab;
+        }
+        .lid {
+            position: absolute;
+            top: -3vw;
+            left: 0;
+            width: 15vw;
+            height: 3vw;
+            background: #ff6b81;
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.5s ease-in-out;
+        }
+        .ribbon {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1.5vw;
+            height: 15vw;
+            background: #ffffff;
+            transform: translateX(-50%);
+        }
+        .message {
+            position: absolute;
+            top: 50px;
+            opacity: 0;
+            font-size: 40px;
+            font-weight: bold;
+            color: #d63031;
+            transition: opacity 0.5s, transform 1s;
+        }
+        /* .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: red;
+            opacity: 0.7;
+            animation: fall linear infinite, sway ease-in-out infinite;
+        } */
+        @keyframes floatUp {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(var(--translate-x-value)); }
+        }
+        .anim-text-flow span {
+            animation-name: anim-text-flow-keys;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+        @keyframes anim-text-flow-keys {
+            0% { color: hsl(0, 60%, 60%); }
+            20% { color: hsl(72, 60%, 60%); }
+            40% { color: hsl(144, 60%, 60%); }
+            60% { color: hsl(216, 60%, 60%); }
+            80% { color: hsl(288, 60%, 60%); }
+            100% { color: hsl(360, 60%, 60%); }
+        }
+
+      
+       .confetti {
+            position: absolute;
+            width: 8px;
+            height: 14px;
+            background-color: red;
+            opacity: 0.8;
+            /* transform-origin: left top; */
+            animation: confetti-fall linear infinite;
+        }
+        @keyframes confetti-fall {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(85vh) rotate(720deg);
+                opacity: 0;
+            }
+        } 

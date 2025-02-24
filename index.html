@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Happy Birthday</title>
+</head>
+<body>
+<div class="container">
+        <div class="gift-box" onclick="openGift()">
+            <div class="lid"></div>
+            <div class="ribbon"></div>
+        </div>
+        <div class="message anim-text-flow" id="message">
+            <span>H</span><span>a</span><span>p</span><span>p</span><span>y</span>
+            <span>B</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span><span>,</span>
+            <span>V</span><span>e</span><span>e</span><span>r</span><span>l</span><span>e</span><span>!</span>
+        </div>
+</div>
+
+
+    <script>
+        function openGift() {
+            document.querySelector('.lid').style.transform = 'translateY(-195px)';
+            // document.documentElement.style.setProperty('--translate-x-value', '100px');
+            document.querySelector('.gift-box').style.transform = 'translateY(120px)';
+            setTimeout(() => {
+                let message = document.getElementById('message');
+                message.style.opacity = '1';
+                message.style.transform = 'translateY(-150px)';
+                createConfetti();
+            }, 500);
+            // setTimeout(() => {
+            //     document.getElementById("gift-box").remove()
+            // }, 1500);
+        }
+        function createConfetti() {
+           for (let i = 0; i < 100; i++) {
+                let confetti = document.createElement("div");
+                confetti.classList.add("confetti");
+                document.body.appendChild(confetti);
+
+                let size = Math.random() * 8 + 5;
+                confetti.style.width = `${size}px`;
+                confetti.style.height = `${size * 1.5}px`;
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                confetti.style.left = `${Math.random() * 98}vw`;
+                confetti.style.top = `10px`;
+                confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                confetti.style.animationDelay = `${Math.random()}s`;
+            } 
+        }
+ 
+
+    </script> 
+</body>
+</html>
