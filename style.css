@@ -32,13 +32,15 @@
             height: 15vw;
             background: #ff4757;
             border-radius: 10px;
-            cursor:grab;
             /* transform: translateX(-50%); */
             /* animation: floatUp 2s ease-out infinite alternate; */
             /* animation: floatUp 2s ease-out infinite alternate; */
         }
         .gift-box :hover{
-            cursor: grab;
+            cursor:pointer;
+        }
+        .container:hover{
+            cursor: pointer;
         }
         .lid {
             position: absolute;
