@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="container" onclick="openGift()">
-        <div class="gift-box">
+        <div class="gift-box" >
             <div class="lid"></div>
             <div class="ribbon"></div>
         </div>
@@ -22,9 +22,9 @@
 
     <script>
         function openGift() {
-            document.querySelector('.lid').style.transform = 'translateY(-195px)';
+            document.querySelector('.lid').style.transform = 'translateY(-215px)';
             // document.documentElement.style.setProperty('--translate-x-value', '100px');
-            document.querySelector('.gift-box').style.transform = 'translateY(120px)';
+            document.querySelector('.gift-box').style.transform = 'translateY(130px)';
             setTimeout(() => {
                 let message = document.getElementById('message');
                 message.style.opacity = '1';
