@@ -1,0 +1,90 @@
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+html, body, .bigContainer {
+    height: 100%;
+    background-color: #FFD2DA; 
+    margin: 0;
+    padding: 0;
+}
+
+.bigContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 1em;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+.buttonContainer button {
+    margin: 0.5em;
+}
+
+button {
+    min-width: 5em;
+    max-width: 8em;
+    height: 3.5em;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    text-align: center;
+    font-family: "Dancing Script", Arial, sans-serif;
+    color: #D63384;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    animation: bounce 2s infinite;
+}
+
+.hoverNo:cover {
+  transition: transform 0.3s ease-in-out;
+}
+
+.hoverNo:hover {
+  transform: translateY(-100px);
+}
+
+
+/* Buttons */
+.no {
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.yes {
+    background-color: #00B380;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 500px) {
+    .buttonContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 100%;
+        max-width: 10em;
+    }
+}

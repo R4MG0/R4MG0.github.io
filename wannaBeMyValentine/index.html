@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Be my Valentine</title>
+</head>
+<body>
+    <div class="bigContainer">
+        <h1 id="title">Do you want to be my Valentine?</h1> 
+        <p id="smallText"></p>
+        <div class="buttonContainer">
+            <button id="yes" class="yes" onclick="happynoises('green')">YES</button>
+            <button id="no" class="no" onclick="nahuh()">NO</button>
+            <!-- <button class="hoverNo">hover NO</button> -->
+        </div>
+        <img id="cuteImage" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="cute gif">
+    </div>
+    <script>
+        function happynoises(newColor) {
+            const elem = document.getElementById("title");
+            const subtitle = document.getElementById("smallText")
+            // elem.style.color = newColor;
+            elem.innerText = "WOW! This makes me really, really happy. Please write me when and where I should come pick you up :)"
+            // subtitle.innerText = "Please write me a private text if the time is ok for ya"
+            const buttonBad = document.getElementById("no")
+            const buttonGood = document.getElementById("yes")
+            buttonBad.remove()
+            buttonGood.remove()
+            const cuteImage = document.getElementById("cuteImage");
+            cuteImage.src = "./cutePic.gif"
+        }
+        const windowWidth = window.innerWidth
+        const windowHeight = window.innerHeight
+        function nahuh(){
+        const button = document.getElementById("no");
+        const parent = button.parentElement;
+        const parentWidth = parent.clientWidth;
+        const parentHeight = parent.clientHeight;
+        const buttonWidth = button.clientWidth;
+        const buttonHeight = button.clientHeight;
+
+        // Generate random position within bounds
+        const randomX = Math.floor(Math.random() * windowWidth - 10);
+        const randomY = Math.floor(Math.random() * windowHeight - 10);
+
+        button.style.position = "absolute";
+        button.style.left = `${randomX}px`;
+        button.style.top = `${randomY}px`;            
+        const elem = document.getElementById("no");
+        elem.style.transformStyle = Math.random()
+        }
+    </script>
+</body>
+</html>
