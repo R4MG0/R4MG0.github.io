@@ -3,12 +3,8 @@
 
 body {
   background: var(--background-color, #111e31);
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* display: grid; */
-  /* place-items: center; */
 }
+
 span{
     position: absolute;
     white-space: nowrap;
@@ -20,7 +16,6 @@ span{
     offset-path: path("M 250 140 C 250 40, 410 40, 410 180 C 410 300, 250 400, 250 430 C 250 400, 90 300, 90 180 C 90 40, 250 40, 250 140 Z");
     offset-distance: calc(var(--i) * 6%);
     offset-rotate: 0deg;
-    /* Use configurable duration variable */
     animation: follow var(--follow-duration, 60s) infinite alternate ease-in-out;
 }
 
