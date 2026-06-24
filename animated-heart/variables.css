@@ -1,0 +1,7 @@
+:root {
+    --background-color: #111e31;
+    --text-color-dark: #db395f;
+    --text-color-light: #ea80b0;
+    /* Duration for the follow animation; can be overridden */
+    --follow-duration: 4s;
+}
