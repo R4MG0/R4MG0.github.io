@@ -1,4 +1,5 @@
 @import "./variables.css";
+@import "./animation.css";
 @import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
 
 body {
@@ -24,5 +25,3 @@ span{
     transform: scale(1.5);
     transform-origin: center;
 }
-
-@keyframes follow { to { offset-distance: 100%; } }
